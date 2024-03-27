@@ -1,6 +1,4 @@
-﻿"use client"
-
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { CarProps } from '@/types';
@@ -13,8 +11,7 @@ interface CardDetailsProps {
     car: CarProps;
 }
 
-const CarDetails = ({ isOpen, closeModal, car }: CardDetailsProps) => {
-  return (
+const CarDetails = ({ isOpen, closeModal, car }: CardDetailsProps) => (
     <>
         <Transition appear show={isOpen} as={Fragment}>
             <Dialog as="div" className="relative z-10" 
@@ -108,7 +105,6 @@ const CarDetails = ({ isOpen, closeModal, car }: CardDetailsProps) => {
             </Dialog>
         </Transition>
     </>
-  )
-}
+)
 
 export default CarDetails
